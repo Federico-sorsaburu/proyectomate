@@ -100,13 +100,10 @@ header {
    }
 }
 
-
 /* Carrousel   */
 .slider-box {
    width: 100%;
    overflow: hidden;
-   
-
 }
 
 .slider-box ul {
@@ -114,7 +111,7 @@ header {
    width: 400%;
    animation: slide 20s infinite alternate ease-in-out;
    padding: 0;
-  
+
 }
 
 .slider-box li {
@@ -168,7 +165,6 @@ header {
    padding: 30px;
    position: relative;
    background-color: #474747;
-
 }
 
 .title__texto {
@@ -178,20 +174,17 @@ header {
    font-size: 3rem;
    padding: 10px;
    transition: .3s all;
-
 }
 
 .parrafo__texto {
    font-size: 1.5rem;
    color: #bbb;
-
    padding: 10px;
    margin-top: 15px;
 }
 
 .title__texto:hover {
    letter-spacing: 4px;
-
 }
 
 /* Contenedor destacado */
@@ -317,9 +310,7 @@ header {
 .productos__card:hover::before {
    opacity: 1;
    z-index: 0;
-
    background-color: transparent;
-
 }
 
 @media (max-width: 768px) {
@@ -423,7 +414,6 @@ header {
    .h2__tex {
       font-size: 30px;
       margin-bottom: 20px;
-      /* Reducir el espacio inferior */
       padding: 10px;
    }
 }
@@ -614,7 +604,6 @@ header {
    }
 }
 
-
 /* Card de ventas mates.html */
 
 .title__present {
@@ -636,7 +625,6 @@ header {
    padding: 40px;
    position: relative;
 }
-
 
 .mates__card {
    width: 100%;
@@ -761,7 +749,7 @@ header {
 }
 
 /* nosotros.html */
-.img__nosotros{
+.img__nosotros {
    background-image: url(../assets/nosotros/yerba-mate-taragui-rUMnY9cE1ac-unsplash\ \(1\).jpg);
    background-repeat: no-repeat;
    background-position: center 0%;
@@ -769,33 +757,128 @@ header {
    height: 100vh;
    padding: 10px;
    position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   
-   
-   
- 
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-.img__nosotros::before{
+
+.img__nosotros::before {
    content: '';
    position: absolute;
    top: 0;
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.7);
-   
-
 }
-.contacto__texto{
+
+.contacto__texto {
    color: white;
    position: relative;
    font-size: 68px;
    padding: 15px;
    text-transform: capitalize;
-   letter-spacing:2px;
+   letter-spacing: 2px;
    font-weight: bolder;
-   
-   
 }
- 
+
+/*  */
+.contenido__nosotros {
+   display: flex;
+   max-width: 1280px;
+   margin: 0 auto;
+   position: relative;
+
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.contenido__nosotros::before {
+   content: '';
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   background: rgba(0, 0, 0, 0.1);
+   position: absolute;
+   backdrop-filter: blur(1.9px);
+}
+
+.contenido__info {
+   display: flex;
+   position: absolute;
+   border-radius: 20px;
+   overflow: hidden;
+   text-align: center;
+   width: 50%;
+   top: 30%;
+   right: 20%;
+   box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+   transition: box-shadow 0.3s ease;
+   z-index: 100;
+}
+
+.contenido__info::before {
+   content: '';
+   width: 100%;
+   height: 100%;
+   top: 0;
+   position: absolute;
+
+   backdrop-filter: blur(19px);
+   z-index: -1;
+}
+
+.contenido__info:hover {
+
+   box-shadow: 0 0 10px rgba(252, 252, 252, 0.781);
+}
+
+.info__nosotros {
+   padding: 10px;
+   color: white;
+   line-height: 35px;
+   background: rgba(0, 0, 0, 0.2);
+   color: white;
+   font-weight: bold;
+   font-style: italic;
+   line-height: 35px;
+
+}
+
+.img__nosotros2 {
+   width: 50%;
+   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+   .contenido__nosotros {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+   }
+
+   .contenido__nosotros::before {
+      display: none;
+   }
+
+   .contenido__info {
+      position: static;
+      width: 100%;
+      margin-top: 20px;
+
+      text-align: center;
+   }
+
+   .contenido__info::before {
+      display: none;
+   }
+
+   .info__nosotros {
+      color: #333;
+   }
+
+   .img__nosotros2 {
+      width: 100%;
+      max-width: 100%;
+   }
+}
