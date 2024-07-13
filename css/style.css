@@ -103,9 +103,10 @@
 
  /* Carrousel   */
  .slider-box {
-    width: 100%;
+    max-width: 1280px;
     overflow: hidden;
     margin: 0 auto;
+    margin-top: 20px;
  }
 
  .slider-box ul {
