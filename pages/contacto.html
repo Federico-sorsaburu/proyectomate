@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
@@ -25,23 +24,35 @@
 </header>
        
 
-    <main>
-      <h2>TE CONTACTAMOS A LA BREVEDAD</h2>
-      <div class="bgr__contacto">
-        
-      </div>
-      <form action="#" >
-        <label for="nombre">Nombre:</label> 
-        <input type="text" id="nombre" name="nombre" required> 
-        
-        <label for="email">Email:</label> 
-        <input type="email" id="email" name="email" required> 
-        
-        <label for="mensaje">Mensaje:</label> 
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea> 
-        
-        <input type="submit" value="Enviar">
-    </form>
+    <main class="contactMates">
+        <div class="containerContacto">
+          <div class="box-info">
+            <h1 class="text__info">CONTACTATE CON NOSOTROS</h1>
+            <div class="data">
+              <p class="data__parraf"><i class="fa-solid fa-phone"></i>+54 9 351-555-1234</p>
+              <p class="data__parraf"><i class="fa-solid fa-location-dot"></i>Cordoba Capital - Argentina</p>
+              <p class="data__parraf"><i class="fa-solid fa-message"></i>ConsultasARG@bonitosmate.com</p>
+            </div>
+          </div>
+          <form >
+            <div class="input-box">
+              <input type="text"  required placeholder="Nombre y apellido">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="email"  required placeholder="Correo electronico">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+              <input type="text"  required placeholder="Asunto">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <div class="input-box">
+               <textarea cols="30" rows="10" placeholder="Deja tu mensaje y te contactamos en la brevedad"></textarea>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        </div>
 
       
     </main>
@@ -78,7 +89,8 @@
           </div>
         </div>
       </div>
-    </footer>
   
+    </footer> 
+    
 </body>
 </html>
