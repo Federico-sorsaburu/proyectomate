@@ -260,7 +260,46 @@
  .card-edit {
     color: #333;
  }
+ .container-info2{
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+   margin-top: 15px;
+    
+ }
+ .group{
+   display: flex;
+   gap: 50px;
+   padding-inline: 10px;
+    text-align: center;
+   
+ }
+ .item{ 
+  padding: 25px;
+   display: flex;
+   flex-direction: column;
+    gap: 20px;
+   
+   
+ }
+ .item h3{
+   padding: 5px;
+ }
+ .item i{
+   font-size: 40px;
+   color: #353433;
+ }
+ .item p{
+   padding: 5px;
+ }
 
+ .item:nth-child(2){
+   border-left: 2px solid rgb(104, 98, 98);}
+   
+  .item:nth-child(3){
+   cursor: pointer;
+   border-left: 2px solid rgb(104, 98, 98);
+  }
  /* Falta mediaq */
 
  .contenedor__productos {
