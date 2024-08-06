@@ -600,7 +600,7 @@
 
  .container__productosgrid {
     display: grid;
-    grid-template-columns: repeat(3, 450px);
+    grid-template-columns: repeat(3, 1fr);
     
     gap: 20px;
     max-width: 100%;
