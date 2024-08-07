@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
  }
 
  body {
@@ -22,7 +23,7 @@
    border-radius: 40px;
   margin: 20px auto;
    z-index: 1000;
-   position: sticky;
+   position: fixed;
    top: 0;
    left: 0;
    right: 0; 
@@ -48,7 +49,8 @@
  .menu {
    list-style: none;
    display: flex;
-   gap: 10px; /* Añade espacio entre los ítems del menú */
+   gap: 10px;
+   margin: 0;  
  }
  
  .menu__item {
@@ -303,7 +305,7 @@
  .img__card {
     width: 100%;
  }
-
+ 
  .card-content {
     color: rgb(255, 238, 238);
     position: absolute;
@@ -494,7 +496,21 @@
        transform: none;
     }
  }
+ 
+ @media (max-width: 768px) {
+   .carousel-item img {
+       object-fit: cover;  
+       height: 300px;  
+   }
+}
 
+/* Ajustes para tablets y pantallas de tamaño intermedio  bootstrap */
+@media (min-width: 769px) and (max-width: 1024px) {
+   .carousel-item img {
+       object-fit: cover;
+       height: 400px;  
+   }
+}
  .carousel-wrapper {
    width: 100%;
     max-width: 1280px;
