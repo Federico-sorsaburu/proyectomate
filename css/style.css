@@ -8,14 +8,11 @@
  body {
     background-color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
  }
-.index{
-   color: b
-}
  
+
  header {
- 
+   background-color: #000000;
    padding: 10px 20px;
    display: flex;
    justify-content: center;
@@ -31,16 +28,7 @@
    right: 0; 
     
  }
- header::before{
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   content: '';
-   top: 0;
-   left: 0;
-   background-color: rgba(14, 12, 12, 0.527);
-   filter: blur(5px);
- }
+ 
  
  .logo {
    max-width: 150px;
@@ -101,12 +89,16 @@
    display: none;
  }
  @media (max-width: 758px) {
+   body{
+      background-color: #000000;
+   }
    header{
       background-color: rgb(0, 0, 0);
      margin: 0 auto;
       position: relative;
       border-radius: 0%;
    }
+  
    .menu-icon {
      display: block;
      color: rgb(255, 255, 255);
@@ -168,26 +160,21 @@
     }
   }
    
-  @media (max-width: 390px) {
+  @media (min-width: 390px) {
    header{
   background-color: red;
   overflow: hidden;
  width: 100%;
  background-color: transparent;
- 
-
   display: block;
- 
-
-  overflow: hidden;
-  
+  overflow: hidden; 
    }
    .menu-icon {
       width: 50px;
      font-size: 2.5rem;
      font-weight: bolder; /* Ajusta el tamaño del icono del menú si es necesario */
-     right: 15px; /* Ajusta la posición según el diseño */
-     color: #000000;
+     right: 15px;  
+     color: #ffffff;
      z-index: 1000;
    }
  
@@ -273,8 +260,11 @@
       
    }
  }
- @media (max-width: 390px){
-    
+ @media (max-width: 430px){
+   .slider-box{
+      width: 100%;
+   }
+   
  }
  
  .texto__cards {
@@ -295,7 +285,7 @@
  @media (max-width: 768px) {
    .texto__cards{
       background-color: rgb(248, 248, 248);
-      width: 550px;
+      width: 100%
    }
  }
  
@@ -511,27 +501,13 @@
     }
  }
  
- @media (max-width: 768px) {
-   .carousel-item img {
-       object-fit: cover;  
-       height: 300px;  
-   }
-}
-
-/* Ajustes para tablets y pantallas de tamaño intermedio  bootstrap */
-@media (min-width: 769px) and (max-width: 1024px) {
-   .carousel-item img {
-       object-fit: cover;
-       height: 400px;  
-   }
-}
+ 
  .carousel-wrapper {
    width: 100%;
     max-width: 1280px;
     padding: 5px 5px;
     overflow: scroll  ;
     overflow-y: hidden;
-    
     position: relative;
     margin: 0 auto;
     cursor: pointer;
@@ -581,10 +557,12 @@
  @media (max-width: 768px) {
    .product-text{
       background-color: rgb(248, 248, 248);
-      width: 550px;
+      align-items: center;
+     margin: 20px;
+      
    }
  }
-
+ 
  
 
 
@@ -620,12 +598,15 @@
        height: 50vh;
        padding: 10px;
        margin: 5px 0;
-       opacity: 1;
+       
     }
 
-    .contenedor-video::before {
-       opacity: 0.6;
-    }
+    
+ }
+ @media (max-width: 500px){
+   .contenedor-video{
+      display: none;
+   }
  }
 
  .container__productosgrid {
