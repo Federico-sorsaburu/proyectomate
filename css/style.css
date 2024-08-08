@@ -299,10 +299,11 @@
  }
 
  .texto__cards {
-    background: rgb(255, 255, 255);
+    background: rgb(26, 25, 25);
     text-align: center;
-    max-width: 1280px;
+ 
     margin: 0 auto;
+    color: white;
     margin-top: 5px;
     animation: scale-up-center .4s cubic-bezier(.39, .575, .565, 1.000) both
  }
