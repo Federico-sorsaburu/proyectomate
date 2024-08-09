@@ -98,19 +98,21 @@
     display: none;
  }
 
- @media (max-width: 758px) {
+ @media (max-width: 768px) {
     body {
        background-color: #000000;
-       position: absolute;
+       
     }
 
     header {
        background-color: rgb(0, 0, 0);
        margin: 0 auto;
-       position: relative;
+      
        border-radius: 0%;
+       
+       
     }
-
+    
     .menu-icon {
        display: block;
        color: rgb(255, 255, 255);
@@ -130,83 +132,73 @@
 
     .navbar {
        display: flex;
+       
        position: fixed;
        top: 0;
        right: 0;
        width: 100%;
        height: 100vh;
-       background: rgba(0, 0, 0, 0.9);
-       overflow: hidden;
-    
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
+       background: rgba(0, 0, 0, 0.9);    
        transform: translateX(-100%);
-       transition: transform 0.3s ease;
+       transition: 1s ;
+      cursor: pointer;
+       
+      
     }
-
+    
     #menu-toggle:checked~.navbar {
        transform: translateX(0);
     }
 
     .menu {
        flex-direction: column;
+       
+       width: 50%;
        gap: 20px;
        padding: 0;
        margin: 0;
     }
-
-    .menu__item a {
-       font-size: 1.5rem;
-       margin: 0;
-       color: white;
-       padding: 15px 30px;
-       transition: background 0.3s ease;
-    }
-
-    .menu__item a:hover {
-       background: rgba(11, 255, 52, 0.2);
-       border-radius: 5px;
-    }
- }
-
- @media (max-width: 390px) {
-    header {
-       background-color: red;
-       overflow: hidden;
-       width: 100%;
-       background-color: transparent;
-       display: block;
-       overflow: hidden;
-    }
-
-    .menu-icon {
-       width: 50px;
-       font-size: 2.5rem;
-       font-weight: bolder;
-       right: 15px;
-       color: #ffffff;
-       z-index: 1000;
-    }
-
-    .logo {
-       display: none;
-       max-width: 120px;
-    }
-
+  
     .menu__item a {
        font-size: 1.2rem;
-       padding: 10px 20px;
+       margin: 0;
+       color: rgb(255, 255, 255);
+       padding: 15px 30px;
+       -webkit-animation:slide-in-elliptic-top-fwd .7s cubic-bezier(.25,.46,.45,.94) 1s both;animation:slide-in-elliptic-top-fwd .7s cubic-bezier(.25,.46,.45,.94) 1s both;
+       transition: background 0.3s ease;
+      position: relative;
+       text-align: center;
     }
- }
+    @-webkit-keyframes slide-in-elliptic-top-fwd{0%{-webkit-transform:translateY(-600px) rotateX(-30deg) scale(0);transform:translateY(-600px) rotateX(-30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0}100%{-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% 1400px;transform-origin:50% 1400px;opacity:1}}@keyframes slide-in-elliptic-top-fwd{0%{-webkit-transform:translateY(-600px) rotateX(-30deg) scale(0);transform:translateY(-600px) rotateX(-30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0}100%{-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% 1400px;transform-origin:50% 1400px;opacity:1}}
+    .menu__item::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      background-color: rgb(243, 147, 4);
+      height: 2px;
+      width: 50%;
+      right: 25%;
+      box-shadow:  0px 0px 22px 1px rgba(248, 246, 135, 0.747);
+    }
+     
+    .menu__item a::after{
+      display: none;
+    }
+   }
+  
+
+ 
+    
+  
 
  /* Carrousel para 5 html  */
  .slider-box {
     max-width: 1280px;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 10px;
     -webkit-animation: scale-up-center .4s cubic-bezier(.55, .085, .68, .53) both;
+   position: relative;
     animation: scale-up-center .4s cubic-bezier(.55, .085, .68, .53) both
  }
  @-webkit-keyframes scale-up-center {
@@ -287,17 +279,100 @@
 
  @media (max-width: 768px) {
     .slider-box {
-       width: 100%;
-       margin: 0px auto;
+       width: 70%;
+
+      
     }
  }
 
- @media (max-width: 430px) {
+ @media (max-width: 320px) {
     .slider-box {
        width: 100%;
     }
  }
+ 
+ 
+ video {
+   position: relative;
+   height: 100vh;  
+   width: 100%; 
+   object-fit: cover; 
+ }
+ 
+ .texto--intro-video {
+   position: absolute;  
+   top: 50%;  
+   left: 50%;  
+   transform: translate(-50%, -50%);  
+   color: white;  
+   
+   padding: 1rem;  
+   text-align: center;  
+   width: 80%;
+}
+.texto--intro-video::before{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   width: 50%;
+   right: 0;
+   transform: translateX(-50%);
+   height: 3px;
+   background-color: #d8910e;
+   
+   cursor: pointer;
+}
+.texto--intro-video:hover::before{
+ transition: 0.3s;
+ 
+ background-color: red;
+  
+}
+ 
+  .videotext{
+   padding: 5px;
+   margin: 2px;
+   font-size: 35px;
+  }
+  
+  @media (max-width:768px ){
+   video{
+      height: 100%;
+      position: relative;
+   }
+    .texto--intro-video{
+    top: 220px;
+    left: 50%;
+    
+       
+    }
+    .videotext{
+      width: 100%;
+      font-size: 17px;
+       
+     
+       
+    }
+    @media (max-width: 430px){
+      video{
+         width: 100%;
+      }
+      .texto--intro-video{
+         top: 190px;
+         width: 50%;
+        
+      }
+      .videotext{
+         font-size: 11px;
+         padding: 5px;
+         background-color: transparent;
+         letter-spacing: 2px;
+      }
+   }
+  }
 
+   
+   
  .texto__cards {
     background: rgb(26, 25, 25);
     text-align: center;
@@ -588,12 +663,8 @@
     }
  }
 
- @media (max-width: 430px) {
-    .contenedor__productos {
-       width: 100%;
-       flex-direction: column;
-    }
-
+ @media (max-width: 320px){
+   
  }
 
  /* Fin */
@@ -757,14 +828,22 @@
     .gallery {
        flex-wrap: wrap;
        width: 100%;
+      
+    }
+    .card-2:hover {
+      display: none;
     }
 
  }
 
- @media (max-width: 420px) {
+ @media (max-width: 320px) {
     .gallery {
        flex-wrap: wrap;
        width: 100%;
+    }
+   
+    .card-2:hover img {
+      display: none;
     }
  }
 
@@ -798,13 +877,13 @@
 
  @media (max-width: 768px) {
     .contenedor-video {
-       height: 50vh;
-       padding: 10px;
-       margin: 5px 0;
+     width: 100%;
+     height: 20vh;
+      
     }
  }
 
- @media (max-width: 500px) {
+ @media (max-width: 320px) {
     .contenedor-video {
        display: none;
     }
@@ -907,7 +986,7 @@
     }
  }
 
- @media (max-width: 420px) {
+ @media (max-width: 320px) {
     .container__productosgrid {
        grid-template-columns: repeat(2, 155px);
     }
